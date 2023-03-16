@@ -1,15 +1,13 @@
 import Logo from "./Logo";
 
 function Nav() {
-  <div>
+  return (
     <div>
-      <Logo />
+      <div>
+        <Logo />
+      </div>
     </div>
-
-    <div></div>
-
-    <div></div>
-  </div>;
+  );
 }
 
 export default Nav;
