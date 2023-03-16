@@ -8,7 +8,7 @@ export const agentList = [
     id: "f9d",
     name: "Monika Hasti",
     photo1: monikaPicture1,
-    photo2: monikaPicture2,
+    photo: monikaPicture2,
     headingBanner: monikaBanner,
     statutAgent: "Pro",
     details:
