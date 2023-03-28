@@ -1,4 +1,5 @@
 import "../../styles/utils/Alert.css";
+import "bulma/css/bulma.min.css";
 import alert from "../../assets/icons/alert-icon.svg";
 
 function Alert() {

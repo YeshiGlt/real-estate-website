@@ -1,47 +1,47 @@
 import "../../styles/utils/CardHome.css";
+import "bulma/css/bulma.min.css";
+import { Card, Media, Content, Heading, Image } from "react-bulma-components";
 import { topRealEstate } from "../../datas/topRealEstate";
 import { agentList } from "../../datas/agentList";
 
-function CardHome({ id, name, picture, address, amountRange }) {
+function CardHome() {
+  // Fonction permettant de trouver les informations liées à l'identité des agents (stockés dans la liste agentList) à partir de leur nom renseigné dans la liste topRealEstate
+
+  const agentInfos = (agentName) =>
+    agentList.find((agent) => agent.agentName === agentName);
+
   return (
-    <div>
-      {topRealEstate.map(({ id, name, picture, address, amountRange }) => (
-        <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <img
-                src={picture}
-                alt={`${name} cover`}
-              />
-            </figure>
-          </div>
-          <div class="card-content">
-            <div class="content">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
-              nec iaculis mauris.
-              <br />
-              <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-            </div>
-            {agentList.map(({ id, name, statutAgent }) => (
-            <div class="media">
-              <div class="media-left">
-                <figure class="image is-48x48">
-                  <img
-                    src="https://bulma.io/images/placeholders/96x96.png"
-                    alt="Placeholder image"
+    <div style={{ display: "flex" }}>
+      {topRealEstate.map(
+        ({ id, name, picture, address, amountRange, agentName }) => (
+          <Card key={id} style={{ width: 300 }}>
+            <Card.Image size="4by3" src={picture} alt={`${name} picture`} />
+            <Card.Content>
+              <Content>
+                <h3>{name}</h3>
+                <span>{address}</span>
+                <br />
+                <span>{amountRange}</span>
+              </Content>
+              <Media key={id}>
+                <Media.Item renderAs="figure" align="left">
+                  <Image
+                    size={64}
+                    alt="64x64"
+                    src={agentInfos(agentName).photo}
                   />
-                </figure>
-              </div>
-              <div class="media-content">
-                <p class="title is-4">John Smith</p>
-                <p class="subtitle is-6">@johnsmith</p>
-              </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      ))}
-      ;
+                </Media.Item>
+                <Media.Item>
+                  <Heading size={4}>{agentInfos(agentName).agentName}</Heading>
+                  <Heading subtitle size={6}>
+                    Estate Agent - {agentInfos(agentName).statutAgent}
+                  </Heading>
+                </Media.Item>
+              </Media>
+            </Card.Content>
+          </Card>
+        )
+      )}
     </div>
   );
 }
