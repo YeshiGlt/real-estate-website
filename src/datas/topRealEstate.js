@@ -9,6 +9,7 @@ export const topRealEstate = [
     picture: opulentFirst,
     address: "FP 47, Opp. D-Mart Isana, Mumbai",
     amountRange: "₹1.42 Cr - 1.65 Cr",
+    agentName: "Jateen Ray",
   },
   {
     id: "7vj",
@@ -16,6 +17,7 @@ export const topRealEstate = [
     picture: opulentSecond,
     address: "9th Block, Jayanagar, Bangalore",
     amountRange: "₹4.49 Cr - 5.65 Cr",
+    agentName: "Monika Hasti",
   },
   {
     id: "5j5",
@@ -23,5 +25,6 @@ export const topRealEstate = [
     picture: shrungal,
     address: "FP 41, Opp. D-Mart Isana, Mumbai",
     amountRange: "₹2.32 Cr - 2.72 Cr",
+    agentName: "Jateen Ray",
   },
 ];
