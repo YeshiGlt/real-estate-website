@@ -6,9 +6,9 @@ import jateenPicture from "../assets/profil-pictures/jateen-ray.png";
 export const agentList = [
   {
     id: "f9d",
-    name: "Monika Hasti",
+    agentName: "Monika Hasti",
     photo1: monikaPicture1,
-    photo2: monikaPicture2,
+    photo: monikaPicture2,
     headingBanner: monikaBanner,
     statutAgent: "Pro",
     details:
@@ -17,7 +17,7 @@ export const agentList = [
   },
   {
     id: "s3w",
-    name: "Jateen Ray",
+    agentName: "Jateen Ray",
     photo: jateenPicture,
     headingBanner: "",
     statutAgent: "Expert",
