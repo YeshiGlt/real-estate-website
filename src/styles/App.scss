@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+// Colors ---
+
+$background: #fbfbfb;
+$textBlack: #242424;
+$textWhite: #fbfbfb;
+$textColor: #6c1187;
+$titleColor: #8931a2;
+$buttonBg: linear-gradient(to left, #6c1187, #a753c1);
+$appIconBg: linear-gradient(#6c1187, #a753c1);
+$elementBg: #ffffff;
+$svgBg: #6d4778;
+
+// --- Colors
+
+body {
+  background-color: $background;
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+
+  h2,
+  h3,
+  h4,
+  h5,
+  span,
+  p,
+  a {
+    font-family: "Poppins", sans-serif;
+    color: $textBlack;
+  }
+
+  h2 {
+    font-size: 30px;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 26px;
+    font-weight: 600;
+  }
+
+  h4 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+
+  h5 {
+    font-size: 19px;
+    font-weight: 600;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  body {
+    .column.is-one-fifth,
+    .column.is-one-fifth-tablet {
+      width: 10%;
+    }
+
+    body .column.is-four-fifths,
+    .column.is-four-fifths-tablet {
+      width: 90%;
+    }
+  }
+}
