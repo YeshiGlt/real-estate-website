@@ -3,19 +3,20 @@ import Title from "./Title";
 import SearchHome from "./SearchHome";
 import Alert from "./Alert";
 import UserAccount from "./UserAccount";
+import { Columns } from "react-bulma-components";
 
 function Header() {
   return (
-    <div>
-      <div>
+    <Columns>
+      <Columns>
         <Title />
-      </div>
-      <div>
+      </Columns>
+      <Columns>
         <SearchHome />
         <Alert />
         <UserAccount />
-      </div>
-    </div>
+      </Columns>
+    </Columns>
   );
 }
 
