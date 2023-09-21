@@ -19,7 +19,7 @@ function App() {
         <Header />
 
         <Columns>
-          <Columns.Column>
+          <Columns.Column className="is-three-fifths is-75">
             <section>
               {dreamHomeOfBest.map(({ id, name, picture }) => (
                 <Columns key={id}>
@@ -37,7 +37,7 @@ function App() {
               </div>
             </section>
           </Columns.Column>
-          <Columns.Column>
+          <Columns.Column className="is-two-fifths is-25">
             <Annonce />
             <ContactAgent />
           </Columns.Column>

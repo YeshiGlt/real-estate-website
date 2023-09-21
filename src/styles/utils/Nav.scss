@@ -1,11 +1,19 @@
+@import "../App.scss";
+
 body {
   .is-one-fifth {
     .column {
       display: flex !important;
       flex-direction: column;
       align-items: center;
+
       .icons {
         padding: 1.5rem;
+        margin-bottom: 2.4rem;
+      }
+
+      .iconColor {
+        background: $buttonBg;
       }
     }
   }

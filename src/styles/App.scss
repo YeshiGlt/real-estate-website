@@ -1,12 +1,16 @@
+@use "sass:math";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* ---------- VARIABLES ---------- */
 
 // Colors ---
 
-$background: #fbfbfb;
 $textBlack: #242424;
 $textWhite: #fbfbfb;
 $textColor: #6c1187;
 $titleColor: #8931a2;
+
+$background: #fbfbfb;
 $buttonBg: linear-gradient(to left, #6c1187, #a753c1);
 $appIconBg: linear-gradient(#6c1187, #a753c1);
 $elementBg: #ffffff;
@@ -14,53 +18,114 @@ $svgBg: #6d4778;
 
 // --- Colors
 
-body {
-  background-color: $background;
-  font-family: "Poppins", sans-serif;
-  font-size: 17px;
+// -- Borders
 
-  h2,
-  h3,
-  h4,
-  h5,
-  span,
-  p,
-  a {
-    font-family: "Poppins", sans-serif;
-    color: $textBlack;
-  }
+$borderColor: rgb(36, 36, 36, 0.1);
+$borderColumn: 1px solid $borderColor;
+$radiusLight: 4px;
+$radiusMid: 12px;
+$radiusLarge: 15px;
+$radiusExtra: 19px;
+$radiusRound: 50%;
 
-  h2 {
-    font-size: 30px;
-    font-weight: 600;
-  }
+// -- Borders
 
-  h3 {
-    font-size: 26px;
-    font-weight: 600;
-  }
+/* ---------- VARIABLES ---------- */
 
-  h4 {
-    font-size: 24px;
-    font-weight: 600;
+// Convertit une valeur en pixel en rem.
+@function toRem($px) {
+  @if not $px {
+    @error 'Missing argument: `$px`.';
   }
-
-  h5 {
-    font-size: 19px;
-    font-weight: 600;
-  }
+  @return math.div($px, 16) + rem;
 }
 
-@media screen and (min-width: 769px) {
+html {
   body {
-    .column.is-one-fifth,
-    .column.is-one-fifth-tablet {
-      width: 10%;
+    background-color: $background;
+    font-family: "Poppins", sans-serif;
+
+    h2,
+    h3,
+    h4,
+    h5,
+    span,
+    p,
+    a {
+      font-family: "Poppins", sans-serif;
+      font-size: toRem(17);
+      color: $textBlack;
     }
 
-    body .column.is-four-fifths,
-    .column.is-four-fifths-tablet {
-      width: 90%;
+    .input {
+      font-size: toRem(14) !important;
+    }
+
+    h2 {
+      font-size: 30px;
+      font-weight: 600;
+    }
+
+    h3 {
+      font-size: 26px;
+      font-weight: 600;
+    }
+
+    h4 {
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    h5 {
+      font-size: 19px;
+      font-weight: 600;
+    }
+
+    .column {
+      padding: 0;
+    }
+
+    .column.is-one-fifth {
+      border-right: $borderColumn;
+      padding: toRem(42) toRem(32);
+    }
+
+    .column.is-four-fifths {
+      > .columns.is-multiline {
+        border-top: $borderColumn;
+      }
+    }
+
+    .column.is-two-fifths {
+      border-left: $borderColumn;
+    }
+  }
+
+  @media screen and (min-width: 769px) {
+    body {
+      .columns {
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+      }
+
+      .column.is-one-fifth,
+      .column.is-one-fifth-tablet {
+        width: 10%;
+      }
+
+      .column.is-four-fifths,
+      .column.is-four-fifths-tablet {
+        width: 90%;
+      }
+
+      .is-three-fifths.is-75 {
+        width: 75%;
+      }
+
+      .is-two-fifths.is-25 {
+        width: 25%;
+      }
     }
   }
 }

@@ -1,0 +1,11 @@
+@use "sass:math";
+@import "../App.scss";
+
+.column {
+  .is-spaceBetween {
+    justify-content: space-between;
+    border-top: none !important;
+    padding: toRem(35) toRem(40);
+    margin: 0;
+  }
+}

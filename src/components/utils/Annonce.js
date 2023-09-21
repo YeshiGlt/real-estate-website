@@ -10,14 +10,24 @@ function Annonce() {
             <h3>{name}</h3>
 
             <div>
-              <span>Time Left: {timeLeft}</span>
-              <span>Status: {status}</span>
+              <p>
+                Time Left: <span>{timeLeft}</span>
+              </p>
+              <p>
+                Status: <span>{status}</span>
+              </p>
             </div>
 
             <div>
-              <span>Date: {date}</span>
-              <span>Location: {location}</span>
-              <span>Loan: {loan}</span>
+              <p>
+                Date: <span>{date}</span>
+              </p>
+              <p>
+                Location: <span>{location}</span>
+              </p>
+              <p>
+                Loan: <span>{loan}</span>
+              </p>
             </div>
 
             <div>

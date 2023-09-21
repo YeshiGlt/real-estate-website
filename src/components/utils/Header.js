@@ -7,11 +7,11 @@ import { Columns } from "react-bulma-components";
 
 function Header() {
   return (
-    <Columns>
+    <Columns className="is-spaceBetween">
       <Columns>
         <Title />
       </Columns>
-      <Columns>
+      <Columns className="headerGroup">
         <SearchHome />
         <Alert />
         <UserAccount />

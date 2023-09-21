@@ -1,0 +1,14 @@
+@use "sass:math";
+@import "../App.scss";
+
+.control {
+  display: flex;
+  width: toRem(313);
+  background-color: $elementBg;
+  padding: 15px 20px;
+  border-radius: $radiusLight;
+  #search-home {
+    border: none;
+    box-shadow: none;
+  }
+}
